@@ -1,4 +1,6 @@
 export const deepCopy = (obj: any): any => {
+  if (obj == null) obj = undefined;
+  
   if (Array.isArray(obj)) {
     return [...obj];
   } else if (typeof obj === 'object') {
